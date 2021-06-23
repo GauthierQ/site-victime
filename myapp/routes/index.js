@@ -13,7 +13,7 @@ router.post('/connected', function(req, res, next) {
   var hash = hash.toString(CryptoJS.enc.Base64);
     
   if ((dumb_data.username == req.body.username) && (dumb_data.password == hash)) {
-    res.render('connected', { title: 'Victime Website',username: req.body.username});
+    res.render('connected', { title: 'Victim Website',username: req.body.username});
   } else {
     res.render('index', { title: 'Victim Website', error: 'Invalid credentials' });
   }
